@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/giris">
+
+    <fragment
+        android:id="@+id/anasayfa"
+        android:name="com.example.mekan.view.Anasayfa"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfa_to_yemekTanitim"
+            app:destination="@id/yemekTanitim" />
+        <action
+            android:id="@+id/action_anasayfa_to_recyle_page"
+            app:destination="@id/recyle_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/yemekTanitim"
+        android:name="com.example.mekan.view.YemekTanitim"
+        android:label="fragment_yemek_tanitim"
+        tools:layout="@layout/fragment_yemek_tanitim" />
+    <fragment
+        android:id="@+id/recyle_page"
+        android:name="com.example.mekan.view.Recyle_page"
+        android:label="fragment_recyle_page"
+        tools:layout="@layout/fragment_recyle_page" >
+        <action
+            android:id="@+id/action_recyle_page_to_gosterim2"
+            app:destination="@id/gosterim" />
+    </fragment>
+    <fragment
+        android:id="@+id/gosterim"
+        android:name="com.example.mekan.view.Gosterim"
+        android:label="fragment_gosterim"
+        tools:layout="@layout/fragment_gosterim" />
+    <fragment
+        android:id="@+id/giris"
+        android:name="com.example.mekan.view.giris"
+        android:label="fragment_giris"
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/action_giris_to_anasayfa"
+            app:destination="@id/anasayfa" />
+    </fragment>
+</navigation>
